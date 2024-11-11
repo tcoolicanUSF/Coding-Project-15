@@ -21,10 +21,21 @@ transaction4.updateQuantity();
 console.log(`Portfolio Total Value: $${totalPortfolioValue}`);
 console.log(`Portfolio Distribution: ${portfolioDistribution}`);
 
-document.getElementById("portfolio-value").textContent = `Portfolio Value: $${totalPortfolioValue}`;
-document.getElementById("portfolio-allocation").textContent = `Portfolio Allocation: ${portfolioDistribution}`;
+//HTML addition
+let div1 = document.getElementById("portfolio-value")
+div1.textContent = `Portfolio Value: $${portfolioValue}`
 
-document.getElementById("transaction1").textContent = `Transaction 1 updated quantity: ${transaction1.updateQuantity()}`;
-document.getElementById("transaction2").textContent = `Transaction 2 updated quantity: ${transaction2.updateQuantity()}`;
-document.getElementById("transaction3").textContent = `Transaction 3 updated quantity: ${transaction3.updateQuantity()}`;
-document.getElementById("transaction4").textContent = `Transaction 4 updated quantity: ${transaction4.updateQuantity()}`;
+let div2 = document.getElementById("portfolio-allocation")
+div2.textContent = `Portfolio Allocation: ${portfolioAllocation}`
+
+let p1 = document.getElementById("transaction1")
+p1.textContent = transaction1.updateAssetQuantity()
+
+let p2 = document.getElementById("transaction2")
+p2.textContent = transaction2.updateAssetQuantity()
+
+let p3 = document.getElementById("transaction3")
+p3.textContent = transaction3.updateAssetQuantity()
+
+let p4 = document.getElementById("transaction4")
+p4.textContent = transaction4.updateAssetQuantity()
